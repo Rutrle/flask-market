@@ -28,3 +28,11 @@ filter
 
 >>> Item.query.filter_by(price=500).all()
 [Item Iphone 10]
+
+delete all
+>>> db.drop_all()
+
+adding property (relationship)
+>>> item1.owner = User.query.filter_by(username='jsc').first().id
+>>> db.session.add(item1) 
+>>> db.session.commit()   
