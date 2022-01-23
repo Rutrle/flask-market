@@ -1,0 +1,30 @@
+creating database:
+>>> from market import db
+>>> db.create_all()
+
+creating items:
+>>> from market import Item
+>>> item1=Item(name="Iphone 10", price=500, barcode = '846314997', description='desc')
+>>> db.session.add(item1)
+>>> db.session.commit()
+
+shows all Items:
+>>> Item.query.all()    
+
+iterate through 
+>>> for item in Item.query.all():
+...     item.name
+...     item.id
+
+filter
+>>> Item.query.filter_by(price=500)
+<flask_sqlalchemy.BaseQuery object at 0x00000208B42BF640>
+>>> for item in Item.query.filter_by(price=500):
+...     item.name
+...     item.price
+... 
+'Iphone 10'
+500
+
+>>> Item.query.filter_by(price=500).all()
+[Item Iphone 10]
