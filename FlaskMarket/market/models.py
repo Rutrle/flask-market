@@ -1,4 +1,4 @@
-
+from market import db
 
 
 class Item(db.Model):
