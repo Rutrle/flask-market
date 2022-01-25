@@ -8,6 +8,8 @@ authors = ["Jakub Rutrle <rutrle@seznam.cz>"]
 python = "^3.10"
 Flask = "^2.0.2"
 Flask-SQLAlchemy = "^2.5.1"
+Flask-WTF = "^1.0.0"
+WTForms = "^3.0.1"
 
 [tool.poetry.dev-dependencies]
 
